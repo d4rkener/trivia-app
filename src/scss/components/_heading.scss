@@ -1,0 +1,9 @@
+@use '../abstracts' as abs;
+
+.heading {
+  background-color: abs.$yellow;
+  display: inline-block;
+  padding: 0.875rem 3rem;
+  box-shadow: 4px 4px 0px abs.$darkBlue;
+  transform: translateY(-50%);
+}

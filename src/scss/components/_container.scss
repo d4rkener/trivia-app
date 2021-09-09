@@ -1,0 +1,14 @@
+@use '../abstracts' as abs;
+
+main {
+  padding: 4.875rem 0.625rem;
+
+  .container {
+    max-width: 48rem;
+    margin: 0 auto;
+    background-color: abs.$white;
+    text-align: center;
+    border-radius: 1.5625rem;
+    padding-bottom: 2.187rem;
+  }
+}

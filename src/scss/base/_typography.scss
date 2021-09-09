@@ -2,6 +2,7 @@
 
 h1,
 h2,
+label,
 p {
   color: abs.$darkBlue;
 }
@@ -16,7 +17,8 @@ h1 {
   }
 }
 
-h2 {
+h2,
+label {
   font-weight: 500;
   font-size: 1.25rem;
 }

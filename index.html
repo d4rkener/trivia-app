@@ -17,18 +17,50 @@
     <title>Trivia App</title>
   </head>
   <body>
-    <div class="card">
-      <h1>Trivia App</h1>
-      <h2>
-        Daniel Radcliffe became a global star in the film industry due to his
-        performance in which film franchise?
-      </h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non possimus
-        obcaecati itaque magnam excepturi corrupti reiciendis, doloribus
-        adipisci ratione quos?
-      </p>
-    </div>
+    <main>
+      <div class="container">
+        <!-- Heading -->
+        <div class="heading">
+          <h1>Trivia App</h1>
+        </div>
+        <!-- Start Menu -->
+        <div class="start">
+          <div class="start__rules">
+            <h2>Rules:</h2>
+            <div>
+              <p>
+                1. You will get 10 questions according to your selected
+                category.
+              </p>
+              <p>2. You have 15 seconds to answer each question correctly.</p>
+              <p>3. If you answer each question correctly, you get a point.</p>
+            </div>
+          </div>
+          <form class="start__form">
+            <!-- Category -->
+            <div class="start__form--category">
+              <label>Select Category:</label><br /><select>
+                <option value="">Any Category</option>
+                <option value="15">Video Games</option>
+                <option value="14">Television</option>
+                <option value="11">Films</option>
+              </select>
+            </div>
+            <!-- Difficulty -->
+            <div class="start__form--difficulty">
+              <label>Select Difficulty:</label><br /><select>
+                <option value="">Any Difficulty</option>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+              </select>
+            </div>
+            <!-- Submit Button -->
+            <button type="submit" class="btn">Start Game</button>
+          </form>
+        </div>
+      </div>
+    </main>
 
     <!-- Scripts -->
     <script type="module" src="./src/scripts/main.js"></script>
