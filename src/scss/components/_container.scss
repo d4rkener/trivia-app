@@ -10,5 +10,28 @@ main {
     text-align: center;
     border-radius: 1.5625rem;
     padding-bottom: 2.187rem;
+    padding: 0 1.5625rem 2.187rem 1.5625rem;
+
+    @include abs.breakpoint(medium) {
+      padding: 0 2.5625rem 2.187rem 2.5625rem;
+    }
+  }
+
+  .error {
+    background-color: abs.$purple;
+    padding: 0.5rem 1.4rem;
+    color: abs.$white;
+    font-weight: 600;
+    border-radius: 0.6875rem;
+    margin-bottom: 1.56rem;
+
+    span {
+      font-size: 0.875rem;
+      margin-left: 0.5rem;
+
+      @include abs.breakpoint(medium) {
+        font-size: 1rem;
+      }
+    }
   }
 }

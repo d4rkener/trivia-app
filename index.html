@@ -14,17 +14,27 @@
       href="https://fonts.googleapis.com/css2?family=Francois+One&family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
     <title>Trivia App</title>
   </head>
   <body>
-    <main>
+    <main id="main">
       <div class="container">
         <!-- Heading -->
         <div class="heading">
-          <h1>Trivia App</h1>
+          <h1 id="headingText">Trivia App</h1>
+        </div>
+        <!-- Error -->
+        <div class="error hide" id="error">
+          <i class="fas fa-exclamation"></i><span id="errorText"></span>
         </div>
         <!-- Start Menu -->
-        <div class="start">
+        <div class="start" id="startMenu">
           <div class="start__rules">
             <h2>Rules:</h2>
             <div>
@@ -36,10 +46,10 @@
               <p>3. If you answer each question correctly, you get a point.</p>
             </div>
           </div>
-          <form class="start__form">
+          <form class="start__form" id="startForm">
             <!-- Category -->
             <div class="start__form--category">
-              <label>Select Category:</label><br /><select>
+              <label>Select Category:</label><br /><select id="category">
                 <option value="">Any Category</option>
                 <option value="15">Video Games</option>
                 <option value="14">Television</option>
@@ -48,7 +58,7 @@
             </div>
             <!-- Difficulty -->
             <div class="start__form--difficulty">
-              <label>Select Difficulty:</label><br /><select>
+              <label>Select Difficulty:</label><br /><select id="difficulty">
                 <option value="">Any Difficulty</option>
                 <option value="easy">Easy</option>
                 <option value="medium">Medium</option>
@@ -61,6 +71,15 @@
         </div>
       </div>
     </main>
+
+    <!-- Loading Screen -->
+    <div class="loading hide" id="loadingScreen">
+      <div class="loading__container">
+        <div class="heading">
+          <h1>Starting in <span id="startingTime"></span>...</h1>
+        </div>
+      </div>
+    </div>
 
     <!-- Scripts -->
     <script type="module" src="./src/scripts/main.js"></script>
