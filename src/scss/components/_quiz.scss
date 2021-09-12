@@ -1,0 +1,32 @@
+@use '../abstracts' as abs;
+
+.quiz {
+  text-align: left;
+
+  &__options {
+    button {
+      text-align: left;
+      font-family: abs.$fontPoppins;
+      display: inline-block;
+      padding: 10px 28px;
+      width: 100%;
+      border: 2px solid abs.$darkBlue;
+      color: abs.$darkBlue;
+      margin-top: 25px;
+      cursor: pointer;
+      border-radius: 12px;
+      background: abs.$white;
+      font-size: 20px;
+      font-weight: 500;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 40px;
+
+      &:focus {
+        background: abs.$darkBlue;
+        color: abs.$white;
+      }
+    }
+  }
+}
