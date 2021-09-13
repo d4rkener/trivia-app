@@ -12,6 +12,9 @@ const main = document.getElementById('main');
 const loadingScreen = document.getElementById('loadingScreen');
 const startingTime = document.getElementById('startingTime');
 const quizScreen = document.getElementById('quiz');
+const resultScreen = document.getElementById('result');
+const score = document.getElementById('score');
+const playAgainBtn = document.getElementById('playAgain');
 let counter = 3;
 let questionIndex = 0;
 let result = 0;
@@ -37,7 +40,9 @@ const checkingAnswers = (allOptions, correctAnswer, data) => {
 
 const displayingQuestions = (data) => {
   if (questionIndex > 9) {
-    console.log('Your result is: ', result);
+    quizScreen.classList.add('hide');
+    resultScreen.classList.remove('hide');
+    score.textContent = result;
   } else {
     // eslint-disable-next-line camelcase
     const { question, correct_answer, incorrect_answers } = data[questionIndex];
@@ -115,5 +120,11 @@ const startGame = async (e) => {
   }
 };
 
+const playAgain = () => {
+  // Reloading Window
+  window.location.reload(true);
+};
+
 // Event Listeners
 startForm.addEventListener('submit', startGame);
+playAgainBtn.addEventListener('click', playAgain);

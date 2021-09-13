@@ -1,0 +1,28 @@
+@use '../abstracts' as abs;
+
+.result {
+  h3 {
+    font-size: 30px;
+    font-weight: 600;
+    color: abs.$darkBlue;
+  }
+
+  &__img {
+    margin-top: 12px;
+    width: 75%;
+
+    @include abs.breakpoint(medium) {
+      width: 16rem;
+    }
+  }
+
+  p {
+    font-size: 24px;
+    margin-top: 28px;
+
+    span {
+      color: abs.$green;
+      font-weight: 600;
+    }
+  }
+}
